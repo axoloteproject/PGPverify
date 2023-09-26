@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Impression Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Impression Verification</h1>
+        <p>Enter your digital impression:</p>
+        <input type="text" id="digitalImpression" placeholder="Enter your digital impression">
+        <button onclick="verifyDigitalImpression()">Verify</button>
+        <p id="verificationResult"></p>
+    </div>
+
+    <script>
+        function verifyDigitalImpression() {
+            const input = document.getElementById('digitalImpression').value;
+            const verificationResult = document.getElementById('verificationResult');
+            
+            // Compare the input with your expected digital impression
+            const expectedDigitalImpression = "A28FA67FFA2029A4E1E81CFB3231CBF0AD99EA34";
+            
+            if (input === expectedDigitalImpression) {
+                verificationResult.textContent = 'Digital impression is valid.';
+            } else {
+                verificationResult.textContent = 'Digital impression is not valid.';
+            }
+        }
+    </script>
+</body>
+</html>
